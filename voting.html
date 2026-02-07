@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voting DApp</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  padding: 40px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.connect {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.vote {
+  background-color: #2196F3;
+  color: white;
+}
+
+.results {
+  background-color: #9C27B0;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#account {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#results {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+  </style>
+</head>
+<body>
+
+<h2>Blockchain Voting DApp</h2>
+
+<button onclick="connectWallet()">Connect Wallet</button>
+<p id="account"></p>
+
+<hr>
+
+<h3>Vote for a Candidate</h3>
+<button onclick="vote(0)">Vote Alice</button>
+<button onclick="vote(1)">Vote Bob</button>
+<button onclick="vote(2)">Vote Charlie</button>
+
+<hr>
+
+<h3>Results</h3>
+<button onclick="getResults()">Show Results</button>
+<p id="results"></p>
+
+<!-- ethers.js library -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
